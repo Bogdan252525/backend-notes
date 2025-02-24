@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",		
+		"build:ui": "rm -rf ../backend-notes/dist && cd ../frontend-notes && rm -rf dist && npm run build && cp -r dist ../backend-notes/dist",
+		"deploy:full": "npm run build:ui && cd ../backend-notes && git add . && git commit -m 'uibuild' && git push"
   },
   "author": "Bohdan Rud",
   "license": "ISC",
