@@ -5,16 +5,18 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",		
-		"build:ui": "rm -rf ../backend-notes/dist && cd ../frontend-notes && rm -rf dist && npm run build && cp -r dist ../backend-notes/dist",
-		"deploy:full": "npm run build:ui && cd ../backend-notes && git add . && git commit -m 'uibuild' && git push"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "rm -rf ../backend-notes/dist && cd ../frontend-notes && rm -rf dist && npm run build && cp -r dist ../backend-notes/dist",
+    "deploy:full": "npm run build:ui && cd ../backend-notes && git add . && git commit -m 'uibuild' && git push"
   },
   "author": "Bohdan Rud",
   "license": "ISC",
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.21.1"
+    "dotenv": "^16.4.7",
+    "express": "^4.21.1",
+    "mongoose": "^8.11.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.7"
